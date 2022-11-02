@@ -33,16 +33,38 @@ console.log(localStorage.getItem("nome")) */
 const tarefasDB = JSON.parse(localStorage.getItem("tarefas")) //transformar em objeto para mostrar o objeto em tal posição
 console.log(tarefasDB[0]. descricao) */
 
-const inputTarefa = document.querySelector('#tarefa')
+const descricaoTarefa = document.querySelector('#tarefa') //passar o id do objeto
 
 const form = document.querySelector('#form') //acessar a partir do id 
 
+const dataTarefa = document.querySelector('#data')
+
+const listaTarefas = []
+
+function limparFormulario() {
+    descricaoTarefa.value = ''
+    dataTarefa.value = ''
+}
+
 form.addEventListener('submit', function(event){ // escuta ação (passar o mouse, clicar), no caso do formulário é submeter. A função tem como parâmetro o evento
     event.preventDefault() //não recarrega a página ao clicar em adicionar (submeter)
-    console.log(inputTarefa.value) 
-})
 
-const botaoImprimir = document.querySelector('#imprimir')
-botaoImprimir.addEventListener('click', function(){
-    console.log('Clicou no botão!')
+
+const tarefa = { //objeto
+    descricao: descricaoTarefa.value, 
+    data: dataTarefa.value,
+    realizado: false
+}
+
+listaTarefas.push(tarefa)
+limparFormulario()
 })
+/* const botaoImprimir = document.querySelector('#imprimir')
+botaoImprimir.addEventListener('click', function (){ //hover, ao soltar o click, etc
+    console.log('Clicou no botão!')
+}) 
+
+function imprimir() {
+    console.log('Clicou no botão')   ou fazer assim
+}
+*/
