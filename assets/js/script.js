@@ -34,10 +34,12 @@ const tarefasDB = JSON.parse(localStorage.getItem("tarefas")) //transformar em o
 console.log(tarefasDB[0]. descricao) */
 
 const descricaoTarefa = document.querySelector('#tarefa') //passar o id do objeto
+const dataTarefa = document.querySelector('#data')
 
 const form = document.querySelector('#form') //acessar a partir do id 
 
-const dataTarefa = document.querySelector('#data')
+const result = document.querySelector('#result')
+
 
 let listaTarefas = []
 
@@ -47,14 +49,12 @@ function limparFormulario() {
 }
 
 const tarefasToLocalStorage = () => { //constante que aponta para uma função anônima (sem nome)
-    localStorage.setItem("tarefas", JSON.stringify(listaTarefas))
+    localStorage.setItem('tarefas', JSON.stringify(listaTarefas))
 }
 
 const getTarefasFromLocalStorage = () => {
-    listaTarefas = JSON.parse(localStorage.getItem("tarefas"))
+    listaTarefas = JSON.parse(localStorage.getItem('tarefas'))
 }
-
-const result = document.querySelector('#result')
 
 const setResultToTable = () => { //mostrar os resultados (tarefa) na tabela 
     
@@ -86,7 +86,7 @@ const tarefa = { //objeto
 }
 
 listaTarefas.push(tarefa)
-limparFormulario()
+// limparFormulario()
 tarefasToLocalStorage()
 getTarefasFromLocalStorage()
 setResultToTable()
