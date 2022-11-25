@@ -1,10 +1,10 @@
 {
   "name": "todoapp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc --watch"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pri01teodoro/javascript/issues"
-  }
+  },
+  "homepage": "https://github.com/pri01teodoro/javascript#readme",
+  "keywords": [],
+  "description": ""
 }

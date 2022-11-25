@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="assets/js/models/tarefa.js"></script>
+    <script src="assets/js/models/TarefasListas.js"></script>
+    <script src="assets/js/views/TarefaView.js"></script>
+    <script src="assets/js/controllers/TarefaController.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <form>
+        <div>
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao">
+        </div>
+
+        <div>
+            <label for="data">Data:</label>
+            <input type="datetime-local" id="data">
+        </div>
+        <button id="btn-adicionar">Adicionar</button>
+    </form>
+
+    <table id="tabela-tarefas"></table>
+</body>
+</html>

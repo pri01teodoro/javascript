@@ -1,16 +1,12 @@
+"use strict";
 class TarefaController {
-    private _listaTarefa: TarefaListas;
-    private _tarefaView: tarefaView;
-    
-    constructor(listaTarefas: TarefaListas) {
+    constructor(listaTarefas) {
         this._listaTarefa = listaTarefas;
-        this._tarefaView = new tarefaView();
+        this._tarefaView = new TarefaView();
     }
-
-    adicionar(tarefa: Tarefa){
+    adicionar(tarefa) {
         // adding inside the list
         this._listaTarefa.adicionar(tarefa);
-        
         // showing in the page
         this._tarefaView.montar(this._listaTarefa);
     }

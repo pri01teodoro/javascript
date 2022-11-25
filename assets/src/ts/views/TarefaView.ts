@@ -1,8 +1,14 @@
-class tarefaView {
+class TarefaView {
     private _tabela: HTMLTableElement;
+    private __inputDescricao: HTMLInputElement;
+    private _inputData: HTMLInputElement;
+    private _btnAdicionar: HTMLButtonElement;
   
     constructor() {
       this._tabela = document.querySelector("#tabela-tarefas")!;
+      this.__inputDescricao = document.querySelector("#descricao")!;
+      this._inputData = document.querySelector("#data")!;
+      this._btnAdicionar = document.querySelector("#btn-adicionar")!;
     }
   
     get tabela(): HTMLTableElement{
@@ -13,7 +19,7 @@ class tarefaView {
       this._tabela = tabela;
     }
   
-    montar(listaTarefas: TarefaListas) {
+    montar(listaTarefas: TarefasListas) {
       this._tabela.innerHTML = "";
   
       listaTarefas.tarefas.map((tar) => {

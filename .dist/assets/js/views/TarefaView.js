@@ -1,7 +1,10 @@
 "use strict";
-class tarefaView {
+class TarefaView {
     constructor() {
         this._tabela = document.querySelector("#tabela-tarefas");
+        this.__inputDescricao = document.querySelector("#descricao");
+        this._inputData = document.querySelector("#data");
+        this._btnAdicionar = document.querySelector("#btn-adicionar");
     }
     get tabela() {
         return this.tabela;
@@ -19,7 +22,7 @@ class tarefaView {
             // insere na coluna
             colDescricao.innerHTML = tar.descricao;
             colDia.innerHTML = tar.data.toString();
-            colConcluida.innerHTML = tar.concluida ? "Concluída" : "Não está concluída";
+            colConcluida.innerHTML = tar.concluida ? "Concluida" : "nao esta concluida";
             // junta na linha
             linha.appendChild(colDescricao);
             linha.appendChild(colDia);

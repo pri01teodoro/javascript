@@ -1,4 +1,4 @@
-const listTarefas = new TarefaListas();
+const listTarefas = new TarefasListas();
 const tarecontorl = new TarefaController(listTarefas)
 
 // controller 
@@ -11,3 +11,5 @@ const tarecontorl = new TarefaController(listTarefas)
 // models 
 //  -> cria o modelo de dados de tarefas
 //  -> cria a o array de tarefas
+
+console.log("Estou no app")

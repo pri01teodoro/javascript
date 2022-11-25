@@ -8,7 +8,7 @@ class Tarefa {
         this._data = data;
         this._concluida = false;
     }
-
+    
     // get and set descricao
     public get descricao(): string {
         return this._descricao;
@@ -33,3 +33,7 @@ class Tarefa {
         this._concluida = concluida;
     }
 }
+
+const tarefa1 = new Tarefa("Comprar pão", new Date(2022,10,24))
+console.log(tarefa1.descricao)
+console.log(tarefa1.data)
